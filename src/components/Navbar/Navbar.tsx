@@ -14,7 +14,6 @@ function Navbar() {
     { href: "/article", label: "مقالات" },
     { href: "/students", label: "مکینی ها" },
   ];
-
   return (
     <header className="mx-4 md:mx-20 mt-4 rounded-2xl shadow-lg bg-white">
       <div className="flex items-center justify-between md:justify-center p-2">
