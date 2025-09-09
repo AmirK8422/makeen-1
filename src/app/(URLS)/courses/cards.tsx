@@ -2,10 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 
 interface Tcards {
-  title : string ,
-  text : string,
-  image : string ,
-  status : string,
+  title? : string ,
+  text? : string,
+  image? : string ,
+  status? : string,
 
 }
 
