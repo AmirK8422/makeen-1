@@ -2,6 +2,7 @@
 import React from "react";
 import Timer from "./Timer";
 import Opsions from "./Opsions";
+import FooterInput from "@/components/Footer/FooterInput";
 
 
 function HomePage() {
@@ -15,7 +16,8 @@ function HomePage() {
         </div>
         <Timer/>
         </div>  
-        <Opsions/>
+        <Opsions />
+        <FooterInput/>
       </div>
   );
 }
