@@ -6,23 +6,9 @@ import { PiInstagramLogoLight } from "react-icons/pi";
 
 function Footer() {
   return (
-    <div className="mx-20 mt-24 text-center">
+    <div className="mx-20  text-center">
       <footer>
-        <h3 className="text-3xl font-medium">با مکین همراه شو</h3>
-        <p className="my-2 font-normal text-[18px]">
-          برای اطلاع از اخبار و برگزاری دوره های مکین <br /> !در خبر نامه ما عضو
-          شوید
-        </p>
-        <div className="flex items-center justify-center mb-9">
-          <button className="bg-[#36A8D9]  text-white p-1 -mr-2 z-20 rounded w-24">
-            عضویت
-          </button>
-          <input
-            type="text"
-            placeholder="شماره تماس خود را وارد کنید"
-            className="w-3xs bg-white rounded shadow text-right p-1 text-gray-500"
-          />
-        </div>
+        
 
         <div className="flex flex-wrap justify-center gap-6 my-8 text-center">
           <div className="flex items-center justify-center gap-2 w-full sm:w-auto">
@@ -45,10 +31,11 @@ function Footer() {
 
         <hr />
         <div className="flex items-center justify-center gap-5 my-7  ">
-          <PiInstagramLogoLight size={45} className="text-gray-500" />
-          <FaTelegramPlane size={45} className="text-gray-500" />
-          <FiYoutube size={45} className="text-gray-500" />
-          <CiTwitter size={45} className="text-gray-500" />
+          {/* <CiTwitter size={45} className="text-gray-500" /> */}
+          <img src="/img/icons/telegram.svg" alt="" className="text-gray-500 w-8" />
+          <img src="/img/icons/insta.svg" alt="" className="text-gray-500 w-8"  />
+          <img src="/img/icons/ble.svg" alt="" className="text-gray-500 w-7" />
+          <img src="/img/icons/youtube.svg" alt="" className="text-gray-500 w-8"  />
         </div>
         <p className="mb-3">
            کلیه حقوق این سایت محفوظ و متعلق به ایده عال رسانه{" "}
