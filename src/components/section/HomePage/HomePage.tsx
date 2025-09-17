@@ -3,6 +3,8 @@ import Timer from "./Timer";
 import Opsions from "./Opsions";
 import FooterInput from "@/components/Footer/FooterInput";
 import VidioSlider from "./VidioSlider/VidioSlider";
+import AboutMakeen from "./AboutMakeen/AboutMakeen";
+import CursesSlider from "./MakeenCourses/CursesSlider";
 
 function HomePage() {
   return (
@@ -14,7 +16,9 @@ function HomePage() {
         <Timer />
       </div>
       <Opsions />
+      <CursesSlider/>
       <VidioSlider />
+      <AboutMakeen/>
       <FooterInput />
     </div>
   );

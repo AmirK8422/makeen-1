@@ -8,6 +8,7 @@
 .colorMakeen{
   background: #F28C28;
   color: #ffffff;
+  
 }
 @layer utilities {
   .color-orange{
