@@ -21,12 +21,12 @@ function Navbar() {
           <a href="/"> مشاوره رایگان</a>
         </button>
         <div className="flex items-center justify-center gap-10">
-          <ul className="hidden md:flex items-center flex-row-reverse gap-16">
+          <ul className="hidden md:flex items-center flex-row-reverse xl:gap-16 lg:gap-10 md:gap-4">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg transition font-medium text-[18px] ${
+                className={`xl:px-4 lg:px-2 md:px-1 py-2 rounded-lg transition font-medium xl:text-[18px] lg:text-[15px] md:text-[13px] ${
                   pathname === link.href
                     ? " colorMakeen shadow-md shadow-orange-300"
                     : "text-gray-700 hover:bg-orange-100"
@@ -36,7 +36,7 @@ function Navbar() {
               </Link>
             ))}
           </ul>
-          <img src="/img/MakeenLogo.svg" alt="logo" className="w-36" />
+          <img src="/img/MakeenLogo.svg" alt="logo" className="xl:w-36 lg:w-30 md:w-27" />
         </div>
       </div>
     </header>
