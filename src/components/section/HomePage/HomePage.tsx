@@ -7,6 +7,7 @@ import AboutMakeen from "./AboutMakeen/AboutMakeen";
 import CursesSlider from "./MakeenCourses/CursesSlider";
 import MakeenStudents from "./MakeenStudents/MakeenStudents";
 import Mentors from "./Mentors/Mentors";
+import Coworks from "./Cowork/Coworks";
 
 function HomePage() {
   return (
@@ -22,7 +23,8 @@ function HomePage() {
       <VidioSlider />
       <AboutMakeen />
       <MakeenStudents />
-      <Mentors/>
+      <Mentors />
+      <Coworks/>
       <FooterInput />
     </div>
   );

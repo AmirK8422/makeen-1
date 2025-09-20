@@ -60,47 +60,42 @@ function Mentors() {
           <p className="text-gray-600 font-medium mb-4">
             {mentors[activeIndex].course}
           </p>
-          <p className="leading-relaxed">
-            {mentors[activeIndex].description}
-          </p>
+          <p className="leading-relaxed">{mentors[activeIndex].description}</p>
 
-          {/* Navigation buttons */}
-          <div className="hidden md:flex justify-center md:justify-start gap-4 mt-6 flex-row-reverse">
-  <button className="mentor-prev px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
-    <FaArrowRightLong />
-  </button>
-  <button className="mentor-next px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
-    <FaArrowLeftLong />
-  </button>
-</div>
-
+          {/* Navigation buttons (only desktop) */}
+          <div className="hidden md:flex justify-center md:justify-start gap-4 mt-6">
+            {/* Prev button = left */}
+            <button className="mentor-prev px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
+              <FaArrowLeftLong />
+            </button>
+            {/* Next button = right */}
+            <button className="mentor-next px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
+              <FaArrowRightLong />
+            </button>
+          </div>
         </div>
 
         {/* Right side: swiper */}
         <div className="md:w-1/2 order-1 md:order-2 w-full">
           <Swiper
-            centeredSlides
-            navigation={{ nextEl: ".mentor-prev", prevEl: ". mentor-next" }}
+            navigation={{ nextEl: ".mentor-next", prevEl: ".mentor-prev" }}
             modules={[Navigation]}
             onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
             className="w-full"
-            // 📌 Breakpoints برای ریسپانسیو
             breakpoints={{
-              0: { slidesPerView: 4, spaceBetween: -50 },
-              640: { slidesPerView: 4, spaceBetween: -100 },
-              1024: { slidesPerView: 4, spaceBetween: -200 },
-              1280: { slidesPerView: 4, spaceBetween: -300 },
+              0: { slidesPerView:1, spaceBetween: -420, centeredSlides: false },
+              640: { slidesPerView: 3, spaceBetween: -100, centeredSlides: false },
+              1024: { slidesPerView: 3, spaceBetween: -200, centeredSlides: true },
+              1280: { slidesPerView: 4, spaceBetween: -300, centeredSlides: true },
             }}
           >
             {mentors.map((mentor, index) => {
               const diff = Math.abs(index - activeIndex);
 
-              // تعیین scale بر اساس فاصله
               let scale = 0.5;
               if (diff === 0) scale = 1;
               else if (diff === 1) scale = 0.7;
               else if (diff === 2) scale = 0.6;
-              else scale = 0.5;
 
               return (
                 <SwiperSlide
