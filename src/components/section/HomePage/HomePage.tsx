@@ -6,6 +6,7 @@ import VidioSlider from "./VidioSlider/VidioSlider";
 import AboutMakeen from "./AboutMakeen/AboutMakeen";
 import CursesSlider from "./MakeenCourses/CursesSlider";
 import MakeenStudents from "./MakeenStudents/MakeenStudents";
+import Mentors from "./Mentors/Mentors";
 
 function HomePage() {
   return (
@@ -20,7 +21,8 @@ function HomePage() {
       <CursesSlider/>
       <VidioSlider />
       <AboutMakeen />
-      <MakeenStudents/>
+      <MakeenStudents />
+      <Mentors/>
       <FooterInput />
     </div>
   );
