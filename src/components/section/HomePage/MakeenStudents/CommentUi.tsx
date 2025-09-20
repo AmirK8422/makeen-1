@@ -20,7 +20,7 @@ function CommentUi({ name, cours, workIn, compenyLogo, profile, layout,onclick,s
         ${layout} 
         ${
           selected
-            ? "border-1 border-makeen " // 
+            ? "border-1 border-orange-400 " // 
             : "border border-transparent"
         }`}
       onClick={onclick}
