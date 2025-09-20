@@ -5,6 +5,7 @@ import FooterInput from "@/components/Footer/FooterInput";
 import VidioSlider from "./VidioSlider/VidioSlider";
 import AboutMakeen from "./AboutMakeen/AboutMakeen";
 import CursesSlider from "./MakeenCourses/CursesSlider";
+import MakeenStudents from "./MakeenStudents/MakeenStudents";
 
 function HomePage() {
   return (
@@ -18,7 +19,8 @@ function HomePage() {
       <Opsions />
       <CursesSlider/>
       <VidioSlider />
-      <AboutMakeen/>
+      <AboutMakeen />
+      <MakeenStudents/>
       <FooterInput />
     </div>
   );
