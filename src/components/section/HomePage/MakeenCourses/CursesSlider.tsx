@@ -8,14 +8,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation"; // if you use navigation
-import "swiper/css/pagination"; // if you use pagination
-
-// Optional: if you enable modules, import them
-// import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper'
-
-// // Optional: install modules
-// SwiperCore.use([Navigation, Pagination, Scrollbar, A11y])
+import "swiper/css/navigation"; 
+import "swiper/css/pagination"; 
 
 function CoursesSlider() {
   return (
@@ -23,15 +17,13 @@ function CoursesSlider() {
       <div className="flex items-center justify-center mb-12">
         <h2 className="font-semibold text-3xl">دوره های مکین</h2>
       </div>
+
+      {/* اسلایدر اول (چپ به راست) */}
       <div className="flex pb-9">
         <Swiper
-          // add desired configuration here
           slidesPerView={2.5}
           spaceBetween={16}
-          // If using modules:
-          // modules={[Navigation, Pagination]}
-          // pagination={{ clickable: true }}
-          // navigation
+          dir="ltr"   // 👈 جهت چپ به راست
         >
           {CardsInformation.map((item, index) => (
             <SwiperSlide key={index}>
@@ -45,15 +37,13 @@ function CoursesSlider() {
           ))}
         </Swiper>
       </div>
+
+      {/* اسلایدر دوم (راست به چپ) */}
       <div className="flex">
         <Swiper
-          // add desired configuration here
           slidesPerView={2.5}
           spaceBetween={16}
-          // If using modules:
-          // modules={[Navigation, Pagination]}
-          // pagination={{ clickable: true }}
-          // navigation
+          dir="rtl"   // 👈 جهت راست به چپ
         >
           {CardsInformation.map((item, index) => (
             <SwiperSlide key={index}>
@@ -66,10 +56,13 @@ function CoursesSlider() {
             </SwiperSlide>
           ))}
         </Swiper>
-          </div>
-          <div className="flex items-center justify-center mt-12">
-              <button className="w-48 text-blue-600 border p-2 rounded-full border-blue-600">  <a href="/">مشاهده همه دوره ها</a></button>
-          </div>
+      </div>
+
+      <div className="flex items-center justify-center mt-12">
+        <button className="w-48 text-blue-600 border p-2 rounded-full border-blue-600">
+          <a href="/">مشاهده همه دوره ها</a>
+        </button>
+      </div>
     </div>
   );
 }
