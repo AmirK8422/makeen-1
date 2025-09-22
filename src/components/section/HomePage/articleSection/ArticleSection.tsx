@@ -79,7 +79,7 @@ function Article() {
       <div className="block sm:hidden">
         <Swiper spaceBetween={16} slidesPerView={1.1}>
           {articlesData.map((item, index) => (
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="flex-col-reverse">
               <ArticleCard item={item} />
             </SwiperSlide>
           ))}
