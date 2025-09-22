@@ -8,6 +8,7 @@ import CursesSlider from "./MakeenCourses/CursesSlider";
 import MakeenStudents from "./MakeenStudents/MakeenStudents";
 import Mentors from "./Mentors/Mentors";
 import Coworks from "./Cowork/Coworks";
+import Article from "./articleSection/ArticleSection";
 
 function HomePage() {
   return (
@@ -24,7 +25,8 @@ function HomePage() {
       <AboutMakeen />
       <MakeenStudents />
       <Mentors />
-      <Coworks/>
+      <Coworks />
+      <Article/>
       <FooterInput />
     </div>
   );

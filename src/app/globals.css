@@ -38,3 +38,67 @@
   }
 
 }
+
+@font-face {
+  font-family: "MyFont";
+  src: url("/fonts/KalamehWeb(FaNum)-Black.woff") format("woff"),
+       url("/fonts/KalamehWeb(FaNum)-Black.woff2") format("woff2");
+  font-weight: 900; /* چون Black هست */
+  font-style: normal;
+  font-display: swap;
+}
+/* Light */
+@font-face {
+  font-family: "Kalameh";
+  src: url("/fonts/KalamehWeb(FaNum)-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Regular */
+@font-face {
+  font-family: "Kalameh";
+  src: url("/fonts/KalamehWeb(FaNum)-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Medium */
+@font-face {
+  font-family: "Kalameh";
+  src: url("/fonts/KalamehWeb(FaNum)-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SemiBold */
+@font-face {
+  font-family: "Kalameh";
+  src: url("/fonts/KalamehWeb(FaNum)-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Kalameh";
+  src: url("/fonts/KalamehWeb(FaNum)-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ExtraBold */
+@font-face {
+  font-family: "Kalameh";
+  src: url("/fonts/KalamehWeb(FaNum)-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
