@@ -9,6 +9,7 @@ import MakeenStudents from "./MakeenStudents/MakeenStudents";
 import Mentors from "./Mentors/Mentors";
 import Coworks from "./Cowork/Coworks";
 import Article from "./articleSection/ArticleSection";
+import StudentCompanyWork from "./companyStudentWork/StudentCompanyWork";
 
 function HomePage() {
   return (
@@ -26,7 +27,8 @@ function HomePage() {
       <MakeenStudents />
       <Mentors />
       <Coworks />
-      <Article/>
+      <Article />
+      <StudentCompanyWork/>
       <FooterInput />
     </div>
   );
