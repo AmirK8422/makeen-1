@@ -45,7 +45,18 @@ function Mentors() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <div className="mt-16 md:mt-24 mx-6 md:mx-20 lg:mx-36">
+    <div className="releive relative" >
+            <img
+        src="img/imagesInSite/3.svg"
+        alt=""
+        className="hidden lg:block absolute -top-25 left-0 -z-1"
+      />
+      <img
+        src="img/imagesInSite/4.svg"
+        alt=""
+        className="hidden lg:block absolute left-0 -top-11 -z-10"
+      />
+      <div className="mt-16 md:mt-24 mx-6 md:mx-20 lg:mx-36">
       <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-12 text-center">
         منتورهای مکین
       </h2>
@@ -63,14 +74,14 @@ function Mentors() {
           <p className="leading-relaxed">{mentors[activeIndex].description}</p>
 
           {/* Navigation buttons (only desktop) */}
-          <div className="hidden md:flex justify-center md:justify-start gap-4 mt-6">
+          <div className="hidden flex-row-reverse md:flex  justify-center md:justify-start gap-4 mt-6">
             {/* Prev button = left */}
             <button className="mentor-prev px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
-              <FaArrowLeftLong />
+              <FaArrowRightLong />
             </button>
             {/* Next button = right */}
             <button className="mentor-next px-4 py-2 bg-gray-200 rounded-full hover:bg-gray-300">
-              <FaArrowRightLong />
+              <FaArrowLeftLong />
             </button>
           </div>
         </div>
@@ -117,6 +128,8 @@ function Mentors() {
             })}
           </Swiper>
         </div>
+      </div>
+
       </div>
     </div>
   );
