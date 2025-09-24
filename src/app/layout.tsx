@@ -5,15 +5,9 @@ import Navbar from "@/components/Navbar/Navbar";
 import Footer from "@/components/Footer/footer";
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+
+
 
 export const metadata: Metadata = {
   title: "MakeenAcademy",
@@ -26,9 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fa">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F9F9F9]`}
+    
+        className={`antialiased font-[Kalameh] bg-[#F9F9F9]`}
       >
         <Navbar/>
         {children}
