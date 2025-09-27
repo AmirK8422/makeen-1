@@ -7,7 +7,8 @@ import { PiInstagramLogoLight } from "react-icons/pi";
 function Footer() {
   return (
     <div className="mx-20  text-center">
-      <footer>
+      <footer className="">
+        
         
 
         <div className="flex flex-wrap justify-center gap-6 my-8 text-center">
@@ -41,6 +42,7 @@ function Footer() {
            کلیه حقوق این سایت محفوظ و متعلق به ایده عال رسانه{" "}
           <span className="text-[#36A8D9]">مکین</span> است.
         </p>
+        
       </footer>
     </div>
   );

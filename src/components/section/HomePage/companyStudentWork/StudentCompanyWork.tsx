@@ -6,7 +6,7 @@ function StudentCompanyWork() {
           <h2 className='font-semibold text-3xl pb-4'>با افتخار</h2>
           <p className='text-16 md:text-2xl mb-6 '>دانشجو‌های مکین در شرکت های زیر مشغول به کارند</p>
       <img src="img/icons/Frame 1000003050.png" alt="companyLogo" className='w-full' />
-       <img src="img/icons/companyIcons.png" alt="companyLogo" className='w-full' />
+       {/* <img src="img/icons/companyIcons.png" alt="companyLogo" className='w-full' /> */}
           
     </div>
   )

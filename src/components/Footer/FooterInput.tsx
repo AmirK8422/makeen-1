@@ -2,7 +2,7 @@ import React from 'react'
 
 function FooterInput() {
   return (
-    <footer className='text-center mt-6'>
+    <footer className='text-center mt-6  relative'>
         <h3 className="text-3xl font-medium">با مکین همراه شو</h3>
                 <p className="my-2 font-normal text-[18px]">
                   برای اطلاع از اخبار و برگزاری دوره های مکین <br /> !در خبر نامه ما عضو
@@ -17,8 +17,9 @@ function FooterInput() {
                     placeholder="شماره تماس خود را وارد کنید"
                     className="w-3xs bg-white rounded shadow text-right p-2 focus:outline-none text-gray-500"
                   />
-                </div>
-    </footer>
+      </div>
+      <img src="img/imagesInSite/layer.svg" alt=""  className='hidden lg:hidden 2xl:block absolute -top-2 left-145' />
+    </footer>//
   )
 }
 
