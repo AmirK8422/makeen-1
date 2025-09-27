@@ -49,12 +49,12 @@ function Mentors() {
             <img
         src="img/imagesInSite/3.svg"
         alt=""
-        className="hidden lg:block absolute -top-25 left-0 -z-1"
+        className="hidden lg:block absolute -top-25 left-0 z-1"
       />
       <img
         src="img/imagesInSite/4.svg"
         alt=""
-        className="hidden lg:block absolute left-0 -top-11 -z-10"
+        className="hidden lg:block absolute left-0 -top-10 z-10"
       />
       <div className="mt-16 md:mt-24 mx-6 md:mx-20 lg:mx-36">
       <h2 className="text-2xl md:text-3xl font-semibold mb-8 md:mb-12 text-center">

@@ -12,7 +12,7 @@ function StudentCenter({
   profile,
 }: StudentProps) {
   return (
-    <div className="shadow-2xl rounded-2xl bg-white">
+    <div className="shadow-xs md:shadow-xl rounded-2xl bg-white">
       <div className="flex flex-col items-center justify-center p-2">
         <div className="-mt-12 bg-white p-3 shadow-rt-2xl shadow-rl-2xl rounded-full">
           <img className="w-20 h-20" src={profile?profile:"img/Profile/6.png"} alt="profile" />
