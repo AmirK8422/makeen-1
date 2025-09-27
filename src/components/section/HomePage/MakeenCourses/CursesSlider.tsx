@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
-import { CardsInformation } from "@/app/(URLS)/courses/page";
-import Cards from "@/app/(URLS)/courses/cards";
+
 
 // Swiper React imports
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,6 +9,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation"; 
 import "swiper/css/pagination"; 
+import { CardsInformation } from "@/app/site/(URL)/courses/page";
+import Cards from "@/app/site/(URL)/courses/cards";
 
 function CoursesSlider() {
   return (
@@ -23,7 +24,7 @@ function CoursesSlider() {
         <Swiper
           slidesPerView={2.5}
           spaceBetween={16}
-          dir="ltr"   // 👈 جهت چپ به راست
+            // 👈 جهت چپ به راست
         >
           {CardsInformation.map((item, index) => (
             <SwiperSlide key={index}>

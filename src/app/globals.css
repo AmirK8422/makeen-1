@@ -36,6 +36,16 @@
   .text-gray {
     color: #A2A2A7;
   }
+  .text-gray-dark{
+    color: #8E8E93;
+  }
+  .bg-blue-light{
+    background-color: #36A8D91A;
+  }
+
+    .txt-blue-light{
+    color:  #36A8D9;
+  }
 
 }
 
