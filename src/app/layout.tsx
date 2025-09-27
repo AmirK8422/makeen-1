@@ -25,9 +25,9 @@ export default function RootLayout({
     
         className={`antialiased font-[Kalameh] bg-[#F9F9F9]`}
       >
-        <Navbar/>
+     
         {children}
-       <Footer/>
+    
       </body>
     </html>
   );
