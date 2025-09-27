@@ -16,7 +16,7 @@ interface commentType {
 function CommentUi({ name, cours, workIn, compenyLogo, profile, layout,onclick,selected }: commentType) {
   return (
     <div
-      className={`shadow-2xl rounded-2xl p-4 cursor-pointer transition 
+      className={`shadow-xs md:shadow-2xl  rounded-2xl p-4 cursor-pointer transition 
         ${layout} 
         ${
           selected
