@@ -6,12 +6,12 @@ function AboutMakeen() {
       <img
         src="img/imagesInSite/2.svg"
         alt=""
-        className="hidden lg:block absolute -bottom-1 right-0 -z-10"
+        className="hidden lg:block absolute -bottom-1 right-0 z-10"
       />
       <img
         src="img/imagesInSite/1.svg"
         alt=""
-        className="hidden lg:block absolute right-0 bottom-10 -z-10"
+        className="hidden lg:block absolute right-0 bottom-10 z-10"
       />
 
       <div className="mx-4 sm:mx-20 mt-40">

@@ -1,15 +1,16 @@
 "use client";
 import React from "react";
-import { CardsInformation } from "@/app/(URLS)/courses/page";
-import Cards from "@/app/(URLS)/courses/cards";
 
 // Swiper React imports
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/navigation"; 
-import "swiper/css/pagination"; 
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { CardsInformation } from "@/app/site/(URL)/courses/page";
+import Cards from "@/app/site/(URL)/courses/cards";
 
 function CoursesSlider() {
   return (
@@ -21,9 +22,20 @@ function CoursesSlider() {
       {/* اسلایدر اول (چپ به راست) */}
       <div className="flex pb-9">
         <Swiper
-          slidesPerView={2.5}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 0,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+            reverseDirection: false,
+          }}
+          speed={2000}
+          loop={true}
           spaceBetween={16}
-          dir="ltr"   // 👈 جهت چپ به راست
+          breakpoints={{
+            0: { slidesPerView: 1.5 },
+            640: { slidesPerView: 2.5 },
+          }}
         >
           {CardsInformation.map((item, index) => (
             <SwiperSlide key={index}>
@@ -41,9 +53,20 @@ function CoursesSlider() {
       {/* اسلایدر دوم (راست به چپ) */}
       <div className="flex">
         <Swiper
-          slidesPerView={2.5}
+          modules={[Autoplay]}
+          autoplay={{
+            delay: 1,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          }}
+          speed={2000}
+          loop={true}
+          dir="rtl"
           spaceBetween={16}
-          dir="rtl"   // 👈 جهت راست به چپ
+          breakpoints={{
+            0: { slidesPerView: 1.5 },
+            640: { slidesPerView: 2.5 },
+          }}
         >
           {CardsInformation.map((item, index) => (
             <SwiperSlide key={index}>
@@ -60,7 +83,7 @@ function CoursesSlider() {
 
       <div className="flex items-center justify-center mt-12">
         <button className="w-48 text-blue-600 border p-2 rounded-full border-blue-600">
-          <a href="/">مشاهده همه دوره ها</a>
+          <a href="site/courses">مشاهده همه دوره ها</a>
         </button>
       </div>
     </div>

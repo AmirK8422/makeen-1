@@ -7,18 +7,19 @@ function Navbar() {
   const pathname = usePathname();
 
   const links = [
-    { href: "/", label: "خانه" },
-    { href: "/courses", label: "دوره ها" },
-    { href: "/shareoffice", label: "فضای کار اشتراکی" },
-    { href: "/gallery", label: "گالری تصاویر" },
-    { href: "/article", label: "مقالات" },
-    { href: "/students", label: "مکینی ها" },
+    { href: "/site", label: "خانه" },
+    { href: "/site/courses", label: "دوره ها" },
+    { href: "/site/shareoffice", label: "فضای کار اشتراکی" },
+    { href: "/site/gallery", label: "گالری تصاویر" },
+    { href: "/site/article", label: "مقالات" },
+    { href: "/site/students", label: "مکینی ها" },
   ];
+
   return (
     <header className="mx-4 md:mx-20 mt-4 rounded-2xl shadow-lg bg-white">
       <div className="flex items-center justify-between md:justify-center p-2">
         <button className="px-4 py-2 rounded-lg colorMakeen font-medium md:hidden">
-          <a href="/"> مشاوره رایگان</a>
+          <Link href="/site">مشاوره رایگان</Link>
         </button>
         <div className="flex items-center justify-center gap-10">
           <ul className="hidden md:flex items-center flex-row-reverse xl:gap-16 lg:gap-10 md:gap-4">
@@ -36,7 +37,11 @@ function Navbar() {
               </Link>
             ))}
           </ul>
-          <img src="/img/MakeenLogo.svg" alt="logo" className="xl:w-36 lg:w-30 md:w-27" />
+          <img
+            src="/img/MakeenLogo.svg"
+            alt="logo"
+            className="xl:w-36 lg:w-30 md:w-27"
+          />
         </div>
       </div>
     </header>
