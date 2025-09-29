@@ -56,7 +56,7 @@ function Opsions() {
         <Swiper spaceBetween={16} slidesPerView={1.2}>
           {advanteges.map((opsion, index) => (
             <SwiperSlide key={index}>
-              <div className="shadow-xl rounded-2xl p-6 flex flex-col gap-3 bg-white">
+              <div className=" rounded-2xl p-6 flex flex-col gap-3 bg-white">
                 <div className="flex flex-row-reverse items-center gap-2 mb-2">
                   <div
                     className="p-1 rounded-xl"

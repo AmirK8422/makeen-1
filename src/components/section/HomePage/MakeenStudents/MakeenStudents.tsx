@@ -6,7 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 
-// Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -37,7 +37,9 @@ function MakeenStudents() {
       <div className="mb-5">
         <StudentCenter {...selectedStudent} />
       </div>
-      <Swiper spaceBetween={15} slidesPerView={1.70}>
+      <Swiper spaceBetween={15}
+      
+        slidesPerView={1.70} dir="rtl">
         <SwiperSlide>
           <CommentUi
             name=" امیر یاشار رحمانی فرد"

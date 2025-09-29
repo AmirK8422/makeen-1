@@ -1,13 +1,7 @@
-import HomePage from '@/components/section/HomePage/HomePage'
-import React from 'react'
+import { redirect } from "next/navigation";
 
-function page() {
-  return (
-    <div>
-      <HomePage />
-      
-    </div>
-  )
+export default function page() {
+  redirect("/site");
 }
 
-export default page
+

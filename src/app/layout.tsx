@@ -20,14 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="fa">
+    <html lang="fa" >
       <body
     
         className={`antialiased font-[Kalameh] bg-[#F9F9F9]`}
       >
-        <Navbar/>
+     
         {children}
-       <Footer/>
+    
       </body>
     </html>
   );

@@ -24,7 +24,7 @@ function Cards({title, text, image ,status} : Tcards) {
   }
  
   return (
-    <div className='flex justify-between md:rounded-2xl rounded-lg bg-white w-full h-[180px] md:h-72 md:px-6 px-4 md:py-5 py-2 text-right shadow-[0_0_7px_rgba(0,0,0,0.15)]'>
+    <div className='flex justify-between md:rounded-2xl rounded-lg bg-white w-full h-[180px] md:h-72 md:px-6 px-4 md:py-5 py-2 text-right shadow-xs  hover:shadow-xs hover:-translate-y-1 transition transform'>
       <div className='flex justify-center items-center w-240px'>
         <Image className='md:h-[240px] md:w-[240px]' src={image} alt='logo' width={148} height={148}/>
       </div>
