@@ -3,8 +3,8 @@ import React from "react";
 import Accordion from '@mui/material/Accordion';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
-import { ListItemSecondaryAction } from "@mui/material";
-
+import Dialog from '@mui/material/Dialog';
+import ConsultationForm from '../ConsultationForm/page'
 
 function Uiux() {
 
@@ -178,7 +178,7 @@ function Uiux() {
                   <h1 className="lg:text-[28px] md:text-[20px] text-xl font-semibold">! به پاسخ سوالم نرسیدم</h1>
                   <p className="text-[#AEAEB2] text-center md:text-base text-sm font-medium">.مشاوران مکین به سوالات شما چاسخ میدهند تا به درستی دوره خود را انتخاب کنید</p>
                </div>
-               <button className="flex items-center justify-center text-lg font-medium text-[#F28C28] border-[#F28C28]  border-[1px] py-2 px-4 rounded-[80px] w-[224.5px] h-[37px]">دریافت مشاوره</button>
+               <ConsultationForm />
             </div>
             <div dir="rtl" className="flex flex-col justify-between md:w-1/2 gap-4 md:gap-0">
             {accordion.map((item) => (
