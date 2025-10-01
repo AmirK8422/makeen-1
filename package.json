@@ -19,13 +19,9 @@
     "react-dom": "19.1.0",
     "react-icons": "^5.5.0",
     "react-responsive": "^10.0.1",
-<<<<<<< HEAD
     "swiper": "^11.2.10",
-    "wavesurfer.js": "^7.10.3"
-=======
-    "recharts": "^3.2.1",
-    "swiper": "^11.2.10"
->>>>>>> AdminHeader-FolderChange
+    "wavesurfer.js": "^7.10.3",
+    "recharts": "^3.2.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
