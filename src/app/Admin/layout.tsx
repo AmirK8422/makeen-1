@@ -8,19 +8,11 @@ interface AdminLayoutProps {
 
 export default function AdminLayout({ children }: AdminLayoutProps) {
   return (
-    <div className="flex h-screen" dir="rtl">   {/* کل صفحه فلکس */}
-      {/* سایدبار ثابت */}
+    <div className="flex h-screen" dir="rtl">
       <Navbar />
-
-      {/* بخش اصلی */}
       <div className="flex-1 flex flex-col">
-        {/* هدر بالا */}
         <Header />
-
-        {/* محتوای صفحات */}
-        <main className="flex-1  bg-gray-50 overflow-y-auto">
-          {children}
-        </main>
+        <main className="flex-1  bg-gray-50 overflow-y-auto">{children}</main>
       </div>
     </div>
   );
