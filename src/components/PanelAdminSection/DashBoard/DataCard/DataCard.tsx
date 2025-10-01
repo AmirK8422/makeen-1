@@ -35,7 +35,7 @@ function DataCard() {
   ];
 
   return (
-    <div className="flex items-center justify-between gap-6 flex-wrap">
+    <div className="flex items-center justify-between gap-2">
       {data.map((item, i) => {
        
         const isUp = item.increase > 0;

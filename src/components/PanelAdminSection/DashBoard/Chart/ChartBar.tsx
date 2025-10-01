@@ -52,11 +52,12 @@ const data = [
 
 const Example = () => {
   return (
-    <div className="w-[550px] h-75">
+    <div className=" w-[437px] h-74">
       <div className="flex items-center justify-between mb-9">
         <h2 className="font-medium">کانال های جذب کاربر</h2>
         <p className="text-gray">بر اساس ۱۴۵۶ کاربر</p>
       </div>
+      <div className="bg-white w-full h-70 p-2 rounded-md">
       <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
@@ -75,6 +76,8 @@ const Example = () => {
           <Bar dataKey="pv" stackId="a" fill="#fdecdc" />
         </BarChart>
       </ResponsiveContainer>
+
+      </div>
     </div>
   );
 };
