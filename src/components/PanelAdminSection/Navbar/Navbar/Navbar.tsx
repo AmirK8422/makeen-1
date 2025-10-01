@@ -22,7 +22,7 @@ function Navbar() {
 
     { type: "section", label: "مدیریت محتوا" },
     {
-      href: "/Admin/shareoffice",
+      href: "/Admin/Sections",
       label: "سکشن ها",
       logo: <PiIntersectThree />,
     },
