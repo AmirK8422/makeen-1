@@ -13,7 +13,7 @@ function Navbar() {
   const pathname = usePathname(); 
 
   const links = [
-    { href: "/Admin", label: "داشبورد", logo: <BiHomeAlt2 /> },
+    { href: "/Admin/Dashboard", label: "داشبورد", logo: <BiHomeAlt2 /> },
     {
       href: "/Admin/Manageusers",
       label: "مدیریت کاربران ها",

@@ -11,7 +11,7 @@ function Notific() {
 
   return (
     <div className="w-full bg-white  h-24">
-      <div className="flex items-center justify-between py-3 px-4">
+      <div className="flex items-center justify-between py-3 px-6">
         <div>
           <p>{dayName}</p>
           <p className="text-gray-500">{fullDate}</p>
@@ -21,7 +21,7 @@ function Notific() {
             <IoMdNotifications className="text-2xl" />
           </div>
           <div className="flex gap-2 items-center mr-14">
-            <img src="img/icons/icon.png" alt="profile" />
+            <img src="/img/logmakken.svg" alt="profile" />
             <div>
               <p>آکادمی مکین</p>
               <p className="text-gray-500">سوپر ادمین</p>
