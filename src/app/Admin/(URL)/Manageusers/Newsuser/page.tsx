@@ -1,10 +1,10 @@
-import Manageuser from '@/components/PanelAdminSection/ManageUser/Manageuser'
+import NewsUser from '@/components/PanelAdminSection/ManageUser/NewsUser/News'
 import React from 'react'
 
 function page() {
   return (
     <div>
-      <Manageuser/>
+      <NewsUser/>
     </div>
   )
 }
