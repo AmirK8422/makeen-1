@@ -2,8 +2,20 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { usePathname } from "next/navigation";
+import { Edit2 } from 'iconsax-reactjs';
 
-function Opsions() {
+type Tdialog = {
+  dialog?: () => void ,
+  setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>,
+  ButtonStyle?: string,
+}
+
+function Opsions({dialog,setIsOpen,ButtonStyle}: Tdialog) {
+  
+  const pathname = usePathname();
+
+
   const advanteges = [
     {
       title: "اساتید حرفه‌ای",
@@ -84,11 +96,15 @@ function Opsions() {
       {/* تبلت و دسکتاپ */}
       <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {advanteges.map((opsion, index) => (
-          <div
+          <div className="bg-white rounded-2xl shadow-2xl">
+            <button onClick={()=>{setIsOpen?.(true)}}  className={`h-full ${ButtonStyle}`}>
+          
+            <div
             key={index}
-            className="shadow-xl rounded-2xl p-6 flex flex-col gap-3 bg-white"
+            className="rounded-2xl p-6 flex flex-col gap-3"
           >
-            <div className="flex flex-row-reverse items-center gap-2 mb-2">
+            <div className={`flex justify-between items-center mb-2 ${pathname == '/Admin/Sections/Property' ? 'flex-row' : 'flex-row-reverse'}`}>
+            <div className="flex items-center gap-2 ">
               <div
                 className="p-1 rounded-xl"
                 style={{ backgroundColor: opsion.bg }}
@@ -102,14 +118,20 @@ function Opsions() {
               <h3 className="text-lg font-semibold text-gray-800">
                 {opsion.title}
               </h3>
+              </div>
+              {pathname == '/Admin/Sections/Property' && <Edit2 color="#8e8e93"/>}
+             
             </div>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed text-end">
               {opsion.description}
             </p>
+            
+          </div>
+          </button>
           </div>
         ))}
       </div>
-      
+      {dialog?.()}      
     </div>
   );
 }
