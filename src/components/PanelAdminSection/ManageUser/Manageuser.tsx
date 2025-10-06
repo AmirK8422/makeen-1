@@ -23,7 +23,7 @@ function Manageuser() {
       city: "تهران",
       gender: "مرد",
       course: "فرانت‌اند",
-      action: <button className="text-blue-600 hover:underline">ویرایش</button>,
+      action: "..",
     },
     {
       id: 2,
@@ -32,7 +32,7 @@ function Manageuser() {
       city: "اصفهان",
       gender: "زن",
       course: "UI/UX",
-      action: <button className="text-blue-600 hover:underline">ویرایش</button>,
+      action: "..",
     },
     {
       id: 3,
@@ -41,13 +41,16 @@ function Manageuser() {
       city: "اصفهان",
       gender: "زن",
       course: "UI/UX",
-      action: <button className="text-blue-600 hover:underline">ویرایش</button>,
+      action:".." ,
     },
   ];
 
   return (
     <div className="px-6">
+      <div className="flex flex-row-reverse mt-6">
       <ExelButton />
+
+      </div>
       <Navbar />
       <ReusableTable
         columns={columns}

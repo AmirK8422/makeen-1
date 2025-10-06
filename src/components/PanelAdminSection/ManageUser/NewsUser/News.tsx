@@ -13,7 +13,10 @@ function NewsUser() {
   ];
   return (
     <div className="px-6">
+      <div className="flex flex-row-reverse mt-6">
       <ExelButton />
+
+      </div>
       <Navbar />
       <div className="bg-white rounded-md ">
         <ReusableTable
