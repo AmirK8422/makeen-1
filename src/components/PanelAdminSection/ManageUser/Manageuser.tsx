@@ -1,0 +1,72 @@
+import React from "react";
+
+import Navbar from "./Navbar";
+import ExelButton from "../PublicComponent/ExelButton";
+import ReusableTable from "../PublicComponent/FormUser";
+
+function Manageuser() {
+  const columns = [
+    "ردیف",
+    "نام کاربر",
+    "تاریخ درخواست",
+    "محل سکونت",
+    "جنسیت",
+    "متقاضی دوره",
+    "عملیات",
+  ];
+
+  const users = [
+    {
+      id: 1,
+      name: "امیر نکونام",
+      date: "1403/07/10",
+      city: "تهران",
+      gender: "مرد",
+      course: "فرانت‌اند",
+      action: "..",
+    },
+    {
+      id: 2,
+      name: "سارا احمدی",
+      date: "1403/06/28",
+      city: "اصفهان",
+      gender: "زن",
+      course: "UI/UX",
+      action: "..",
+    },
+    {
+      id: 3,
+      name: "سارا احمدی",
+      date: "1403/06/28",
+      city: "اصفهان",
+      gender: "زن",
+      course: "UI/UX",
+      action:".." ,
+    },
+  ];
+
+  return (
+    <div className="px-6">
+      <div className="flex flex-row-reverse mt-6">
+      <ExelButton />
+
+      </div>
+      <Navbar />
+      <ReusableTable
+        columns={columns}
+        data={users.map((u) => ({
+          ردیف: u.id,
+          "نام کاربر": u.name,
+          "تاریخ درخواست": u.date,
+          "محل سکونت": u.city,
+          جنسیت: u.gender,
+          "متقاضی دوره": u.course,
+          عملیات: u.action,
+        }))}
+        showCheckbox={true}
+      />
+    </div>
+  );
+}
+
+export default Manageuser;

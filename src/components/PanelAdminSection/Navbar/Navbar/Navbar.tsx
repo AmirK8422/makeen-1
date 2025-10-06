@@ -26,7 +26,7 @@ function Navbar() {
       label: "سکشن ها",
       logo: <PiIntersectThree />,
     },
-    { href: "/site/gallery", label: "دوره ها", logo: <PiIntersectThree /> },
+    { href: "/Admin/Courses", label: "دوره ها", logo: <PiIntersectThree /> },
     {
       href: "/site/article",
       label: "گالری تصاویر",
