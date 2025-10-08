@@ -28,12 +28,12 @@ function Navbar() {
     },
     { href: "/Admin/Courses", label: "دوره ها", logo: <PiIntersectThree /> },
     {
-      href: "/site/article",
+      href: "/Admin/Gallery",
       label: "گالری تصاویر",
       logo: <PiIntersectThree />,
     },
-    { href: "/site/students", label: "مقالات", logo: <PiIntersectThree /> },
-    { href: "/site/students", label: "مکینی ها", logo: <PiIntersectThree /> },
+    { href: "/Admin/Article", label: "مقالات", logo: <PiIntersectThree /> },
+    { href: "/Admin/Students", label: "مکینی ها", logo: <PiIntersectThree /> },
 
     { type: "section", label: "مدیریت پنل" },
     { href: "/Admin/Setting", label: "تنظیمات", logo: <IoSettingsOutline /> },
@@ -73,6 +73,7 @@ function Navbar() {
                     : "hover:bg-gray-50"
                 } 
                 ${link.extraClass || "text-gray-dark"}`}
+                
               >
                 <span className="flex justify-center items-center text-2xl">
                   {link.logo}
