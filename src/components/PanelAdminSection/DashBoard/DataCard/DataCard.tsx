@@ -46,7 +46,7 @@ function DataCard() {
         return (
           <div
             key={i}
-            className="p-4 rounded-2xl shadow-md  bg-white flex flex-col justify-between"
+            className="p-4 rounded-2xl shadow-md ` bg-white flex flex-col justify-between"
           >
            
             <div className="flex items-center justify-between">
