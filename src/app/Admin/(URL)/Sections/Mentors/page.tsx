@@ -74,7 +74,7 @@ function PresentationMakeen() {
             'عملیات': <div className='flex gap-2'>{u.operation}</div>,
           }))}/>
     </div>
-    <button  onClick={()=>setIsOpen(true)} className='text-[18px] font-medium text-white h-[53px] w-[144px] bg-[#F28C28] rounded-lg py-3 px-6 absolute top-0 left-5 mt-[-80px] hover:cursor-pointer'> افزودن منتور</button>
+    <button  onClick={()=>setIsOpen(true)} className='text-[18px] font-medium text-white h-[53px] w-[144px] bg-[#F28C28] rounded-lg py-3 px-6 absolute top-0 left-5 mt-[-60px] hover:cursor-pointer'> افزودن منتور</button>
         {dialog()}
     </div>
   )
