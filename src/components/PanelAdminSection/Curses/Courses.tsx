@@ -5,9 +5,8 @@ import ExelButton from "../PublicComponent/ExelButton";
 import ReusableTable from "../PublicComponent/FormUser";
 import { GoTrash } from "react-icons/go";
 import { CiEdit } from "react-icons/ci";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { Modal } from "@mui/material";
+import EditInfoCourse from "./EditInfoCourse";
+import Alert from "../AlertComponents/Alert";
 
 function Courses() {
   const [users, setUsers] = useState([
@@ -15,7 +14,14 @@ function Courses() {
     { id: 2, cours: "Python", state: "درحال ثبت نام" },
     { id: 3, cours: "PHP", state: "تکمیل ظرفیت" },
   ]);
+
   const [ismodal, SetIsModal] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [selectedCourse, setSelectedCourse] = useState<{
+    id: number;
+    cours: string;
+  } | null>(null);
+
   const columns = [
     "ردیف",
     "عنوان دوره",
@@ -24,58 +30,22 @@ function Courses() {
     "عملیات",
   ];
 
-  const handleDelete = (id: number, course: string) => {
-    toast(
-      <div className="flex flex-col items-center justify-center mx-auto rounded-2xl p-2">
-        <span className="bg-red-100 p-2 rounded-2xl mb-2">
-          <GoTrash className="text-red-500 text-2xl" />
-        </span>
-        <p className="font-medium text-lg">حذف دوره</p>
-        <p className="text-sm mt-1">
-          آیا از حذف دوره <b>{course}</b> مطمئن هستید؟
-        </p>
-        <div className="flex justify-center gap-3 mt-3">
-          <button
-            onClick={() => {
-              setUsers((prev) => prev.filter((u) => u.id !== id));
-              toast.dismiss();
-              toast.success(`دوره ${course} با موفقیت حذف شد ✅`, {
-                position: "top-center",
-                autoClose: 2000,
-              });
-            }}
-            className="bg-red-500 text-white px-3 py-1 rounded-md hover:bg-red-600 transition"
-          >
-            بله
-          </button>
-          <button
-            onClick={() => toast.dismiss()}
-            className="bg-gray-400 text-white px-3 py-1 rounded-md hover:bg-gray-500 transition"
-          >
-            خیر
-          </button>
-        </div>
-      </div>,
-      {
-        position: "top-center",
-        autoClose: false,
-        closeOnClick: false,
-        draggable: false,
-        hideProgressBar: true,
-      }
-    );
+  const handleDelete = (id: number, cours: string) => {
+    setSelectedCourse({ id, cours });
+    setShowAlert(true);
   };
 
-  const handleEdit = (course: string) => {
-    toast.info(`در حال ویرایش ${course} ✏️`, {
-      position: "top-center",
-      autoClose: 2000,
-    });
+  const confirmDelete = () => {
+    if (selectedCourse) {
+      setUsers((prev) => prev.filter((u) => u.id !== selectedCourse.id));
+    }
+    setShowAlert(false);
   };
 
   const editHandler = () => {
     SetIsModal(!ismodal);
   };
+
   return (
     <>
       {!ismodal && (
@@ -88,11 +58,11 @@ function Courses() {
 
           {/* Title */}
           <ul className="flex gap-8 text-[18px] mt-4">
-            <li className="border-b-4 border-orange-400" > همه دوره‌ها </li>
+            <li className="border-b-4 border-orange-400">همه دوره‌ها</li>
           </ul>
 
           {/* Table */}
-          <div className="bg-white  rounded-md shadow">
+          <div className="bg-white rounded-md shadow">
             <ReusableTable
               columns={columns}
               data={users.map((u) => ({
@@ -114,87 +84,24 @@ function Courses() {
               showCheckbox={true}
             />
           </div>
-
-          {/* Toast Container */}
-          <ToastContainer />
         </div>
       )}
-      <div>
-        {ismodal && (
-          <div className="bg-white mt-4 rounded-md p-4">
-            <p className="font-medium text-20">افزودن دوره</p>
-            <div className="mt-8 flex items-center  gap-10">
-              <div className="flex flex-col gap-1">
-                <label htmlFor={`add`}>نام دوره</label>
-                <input
-                  type="text"
-                  id={`add`}
-                  placeholder="typeAdres"
-                  className="border w-[356px] border-gray-400 p-2 rounded-md"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor={`add`}>نام دوره</label>
-                <input
-                  type="text"
-                  id={`add`}
-                  placeholder="typeAdres"
-                  className="border w-[356px] border-gray-400 p-2 rounded-md"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor={`add`}> وضعیت دوره</label>
-                <input
-                  type="text"
-                  id={`add`}
-                  placeholder="typeAdres"
-                  className="border w-[356px] border-gray-400 p-2 rounded-md"
-                />
-              </div>
-            </div>
-            <div className="mt-8 flex items-center  gap-10">
-              <div className="flex flex-col gap-1">
-                <label htmlFor={`add`}>وضغیت دوره </label>
-                <input
-                  type="text"
-                  id={`add`}
-                  placeholder="typeAdres"
-                  className="border w-[356px] h-[100px] border-gray-400 p-2 rounded-md"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor={`add`}>نام دوره</label>
-                <input
-                  type="text"
-                  id={`add`}
-                  placeholder="typeAdres"
-                  className="border w-[356px] border-gray-400 p-2 rounded-md"
-                />
-              </div>
-              <div className="flex flex-col gap-1">
-                <label htmlFor={`add`}> وضعیت دوره</label>
-                <input
-                  type="text"
-                  id={`add`}
-                  placeholder="typeAdres"
-                  className="border w-[356px]  border-gray-400 p-2 rounded-md"
-                />
-              </div>
-            </div>
-            <div className="flex justify-center gap-4 mt-8">
-              <button
-                onClick={() => SetIsModal(false)}
-                className="bg-gray-400 text-white px-6 py-2 rounded-md hover:bg-gray-500 transition"
-              >
-                انصراف
-              </button>
-              <button className="bg-orange-500 text-white px-6 py-2 rounded-md hover:bg-orange-600 transition">
-                ثبت دوره
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
+
+      {/* Modal for editing */}
+      {ismodal && <EditInfoCourse state={SetIsModal} />}
+
+      {/* Alert Modal */}
+      {showAlert && selectedCourse && (
+        <Alert
+          icon={<GoTrash className="text-red-500" />}
+          title={`حذف دوره "${selectedCourse.cours}"؟`}
+          description="آیا مطمئن هستید که می‌خواهید این دوره را حذف کنید؟"
+          confirmText="حذف"
+          cancelText="انصراف"
+          onConfirm={confirmDelete}
+          onCancel={() => setShowAlert(false)}
+        />
+      )}
     </>
   );
 }

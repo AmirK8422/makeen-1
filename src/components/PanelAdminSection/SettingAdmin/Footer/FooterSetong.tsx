@@ -8,7 +8,7 @@ function FooterSeting() {
       </ul>
       <div
         className="bg-white w-full
-          p-5 flex items-center flex-col justify-center gap-5 mt-2 rounded-md shadow-2xl"
+          p-5 flex items-center flex-col justify-center gap-5 rounded-md"
       >
         <div className="grid grid-cols-2 items-center justify-center  gap-x-32 gap-y-14">
           {Array.from({ length: 8 }).map((_, i) => (
