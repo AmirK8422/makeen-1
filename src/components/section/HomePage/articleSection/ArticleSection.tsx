@@ -2,8 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import { GoArrowLeft } from "react-icons/go";
-
-// Import Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -39,9 +37,8 @@ function Article() {
     },
   ];
 
-  // کارت مقاله (برای جلوگیری از تکرار کد)
   const ArticleCard = ({ item }) => (
-    <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl hover:-translate-y-1 transition transform flex flex-col text-right">
+    <div className="rounded-2xl border border-gray-300 overflow-hidden hover:shadow-md hover:-translate-y-1 transition transform flex flex-col text-right h-full">
       <Image
         src={item.pic}
         alt={item.title}
@@ -50,10 +47,10 @@ function Article() {
         className="w-full h-40 md:h-48 object-cover"
       />
       <div className="p-4 flex flex-col flex-grow">
-        <h3 className="font-semibold text-lg mb-2 line-clamp-2">
+        <h3 className="font-semibold text-lg mb-2 line-clamp-2 min-h-[3rem]">
           {item.title}
         </h3>
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+        <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
           {item.description}
         </p>
         <div className="flex items-center justify-between mt-auto">
@@ -75,19 +72,23 @@ function Article() {
       {/* عنوان */}
       <h2 className="font-bold text-2xl md:text-3xl mb-12">مقالات</h2>
 
-
+      {/* نسخه موبایل */}
       <div className="block sm:hidden">
-        <Swiper spaceBetween={16} slidesPerView={1.1}>
+        <Swiper
+          spaceBetween={16}
+          slidesPerView={1.1}
+          className="[&_.swiper-slide]:!h-auto [&_.swiper-slide]:flex [&_.swiper-slide]:items-stretch"
+        >
           {articlesData.map((item, index) => (
-            <SwiperSlide key={index} className="flex-col-reverse">
+            <SwiperSlide key={index}>
               <ArticleCard item={item} />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
 
-
-      <div className="hidden sm:grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      {/* نسخه دسکتاپ */}
+      <div className="hidden sm:grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 items-stretch">
         {articlesData.map((item, index) => (
           <ArticleCard key={index} item={item} />
         ))}
