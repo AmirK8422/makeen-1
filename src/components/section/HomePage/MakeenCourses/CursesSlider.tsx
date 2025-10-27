@@ -51,7 +51,7 @@ function CoursesSlider() {
       </div>
 
       {/* اسلایدر دوم (راست به چپ) */}
-      <div className="flex">
+      <div className="flex p-2">
         <Swiper
           modules={[Autoplay]}
           autoplay={{

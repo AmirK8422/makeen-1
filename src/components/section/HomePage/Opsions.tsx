@@ -62,7 +62,7 @@ function Opsions({dialog,setIsOpen,ButtonStyle}: Tdialog) {
   ];
 
   return (
-    <div className="mx-4 sm:mx-10 lg:mx-20 mt-24 text-right">
+    <div className="mx-4 sm:mx-10 lg:mx-20 mt-24 ">
       {/* موبایل*/}
       <div className="block sm:hidden">
         <Swiper spaceBetween={16} slidesPerView={1.2}>

@@ -16,7 +16,7 @@ function Navbar() {
   ];
 
   return (
-    <header className="mx-4 md:mx-20 mt-4 rounded-2xl shadow-lg bg-white">
+    <header className="mx-0 md:mx-20 mt-4 rounded-2xl shadow-lg bg-white/40 backdrop-blur-xl sticky top-2 z-40">
       <div className="flex items-center justify-between md:justify-center p-2">
         <button className="px-4 py-2 rounded-lg colorMakeen font-medium md:hidden">
           <Link href="/site">مشاوره رایگان</Link>
