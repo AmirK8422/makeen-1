@@ -6,7 +6,7 @@ import {CloseCircle} from 'iconsax-reactjs';
 
 function page() {
     const [isOpen, setIsOpen] = useState(false);
-
+  
     const ButtonStyle = 'hover:cursor-pointer hover:shadow-2xl hover:rounded-2xl hover:transition-shadow';
 
   const dialog = () =>{

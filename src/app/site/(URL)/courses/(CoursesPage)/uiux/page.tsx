@@ -93,7 +93,7 @@ function Uiux() {
     <div className="mx-4 md:mx-20 md:mt-9">
       <section className="flex flex-col md:flex-row items-center justify-between mt-[13px]">
         <div className="flex justify-center items-center md:w-[59.45%] w-[100%] md:h-[100%] h-auto md:rounded-2xl rounded-lg md:p-4 p-2 gap-2  bg-white">
-          <Image className="md:rounded-lg rounded-sm w-[95.79%] md:h-[410.06px] h-auto" src="/img/CoursesPagePhoto.jpg" width={729} height={410.06} alt="photo"></Image>
+          <Image className="md:rounded-lg rounded-sm w-[100%] md:h-[410.06px] h-auto" src="/img/CoursesPagePhoto.jpg" width={729} height={410.06} alt="photo"></Image>
         </div>
         <div className="flex flex-col justify-between md:w-[38.75%] md:h-[433px]  md:ml-6 mt-[13px] md:mt-[-13px]">
             <div dir="rtl" className="flex flex-col bg-white md:rounded-2xl rounded-lg md:h-[183px] h-[161px] w-[100%] p-4">
