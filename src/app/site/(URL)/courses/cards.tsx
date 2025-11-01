@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { Clock } from 'iconsax-reactjs';
 
 interface Tcards {
   title : string ,
@@ -38,7 +39,7 @@ function Cards({title, text, image ,status} : Tcards) {
         </div>
         <div className='flex justify-center items-center ml-7'>
            <p className='md:text-sm text-xs text-[#AEAEB2] mr-2'>6 ماه</p>
-          <Image className='md:h-[24px] md:w-[24px]' src="/img/clock.svg" alt='cards' height={16} width={16} ></Image>
+           <Clock className='md:h-[24px] md:w-[24px] h-[16px] w-[16px]' color="#aeaeb2"/>
         </div>
       </div>
       {Status()}

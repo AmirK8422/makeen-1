@@ -5,6 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import Dialog from '@mui/material/Dialog';
 import ConsultationForm from '../ConsultationForm/page'
+import { Teacher,Cards,Clock,Medal } from 'iconsax-reactjs';
 
 function Uiux() {
 
@@ -27,22 +28,22 @@ function Uiux() {
     {
       title: 'نوع برگزاری دوره' ,
       text: 'حضوری',
-      iconUrl: '/img/TeacherIcon.svg',
+      iconUrl: <Teacher className="w-[24px] h-[24px] md:h-[32px] md:w-[32px]" size="32" color="#f28c28"/>,
     },
     {
       title: 'روش پرداخت' ,
       text: 'قسطی',
-      iconUrl: '/img/TeacherIcon.svg',
+      iconUrl: <Cards className="w-[24px] h-[24px] md:h-[32px] md:w-[32px]" size="32" color="#f28c28"/>,
     },
     {
       title: 'مدت زمان دوره' ,
       text: '۱۴۰۰ ساعت',
-      iconUrl: '/img/TeacherIcon.svg',
+      iconUrl: <Clock className="w-[24px] h-[24px] md:h-[32px] md:w-[32px]" size="32" color="#f28c28"/>,
     },
     {
       title: 'گواهی پایان دوره' ,
       text: 'دارد',
-      iconUrl: '/img/TeacherIcon.svg',
+      iconUrl: <Medal className="w-[24px] h-[24px] md:h-[32px] md:w-[32px]" size="32" color="#f28c28"/>,
     },
   ]
 
@@ -135,7 +136,7 @@ function Uiux() {
                 <h1 className="lg:text-lg md:text-[12px] sm:text-base text-[13px] font-medium mb-2">{item.title}</h1>
                 <p className="text-[#AEAEB2] sm:text-base text-[12px] md:text-[12px] lg:text-base font-normal">{item.text}</p>
             </div>
-            <Image className="w-[24px] h-[24px] md:h-[32px] md:w-[32px]" src={item.iconUrl} width={32} height={32} alt="icon"></Image>
+            {item.iconUrl}
         </div>
         ))}
         
