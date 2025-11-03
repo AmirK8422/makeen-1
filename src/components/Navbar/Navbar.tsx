@@ -37,11 +37,14 @@ function Navbar() {
               </Link>
             ))}
           </ul>
+          <a href="/">
           <img
             src="/img/MakeenLogo.svg"
             alt="logo"
             className="xl:w-36 lg:w-30 md:w-27"
           />
+          
+          </a>
         </div>
       </div>
     </header>

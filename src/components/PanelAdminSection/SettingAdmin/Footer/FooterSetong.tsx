@@ -27,7 +27,7 @@ function FooterSetting() {
       try {
         const response = await api.get("/api/Footer");
         console.log("Fetched Data:", response.data);
-        setFooterData(response.data); // داده‌ها رو در state می‌ریزه
+        setFooterData(response.data); 
       } catch (error) {
         console.error("Error fetching footer data:", error);
         alert("خطا در دریافت داده‌های فوتر ❌");
@@ -64,7 +64,7 @@ function FooterSetting() {
     }
   };
 
-  // 🔹 نمایش پیام لودینگ تا زمانی که داده‌ها از سرور بیاد
+  
   if (loading) {
     return <div className="text-center py-10">در حال بارگذاری اطلاعات...</div>;
   }

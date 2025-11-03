@@ -11,7 +11,7 @@ const ConfirmDeleteToast: React.FC<ConfirmDeleteToastProps> = ({
   onConfirm,
   onCancel,
 }) => (
-  <div className="flex flex-col items-center justify-center mx-auto rounded-2xl p-2">
+  <div className="flex flex-col items-center justify-center rounded-2xl ">
     <span className="bg-red-100 p-2 rounded-2xl mb-2">
       <GoTrash className="text-red-500 text-2xl" />
     </span>

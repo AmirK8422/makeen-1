@@ -10,14 +10,13 @@ import Mentors from "./Mentors/Mentors";
 import Coworks from "./Cowork/Coworks";
 import Article from "./articleSection/ArticleSection";
 import StudentCompanyWork from "./companyStudentWork/StudentCompanyWork";
+import Bg from "./Bg";
 
 function HomePage() {
   return (
     <div>
       <div className="mx-4 sm:mx-10 lg:mx-20 flex flex-col lg:flex-row items-center justify-between mt-10 gap-8">
-        <div className="-mt-4 w-full">
-          <img src="/img/homeBg.svg" alt="home-bg" />
-        </div>
+        <Bg/>
         <Timer />
       </div>
       <Opsions />
