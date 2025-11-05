@@ -11,6 +11,7 @@ import Coworks from "./Cowork/Coworks";
 import Article from "./articleSection/ArticleSection";
 import StudentCompanyWork from "./companyStudentWork/StudentCompanyWork";
 import Bg from "./Bg";
+import Frequncy from "./frequncy/Frequncy";
 
 function HomePage() {
   return (
@@ -27,6 +28,7 @@ function HomePage() {
       <Mentors />
       <Coworks />
       <Article />
+      <Frequncy/>
       <StudentCompanyWork/>
       <FooterInput />
     </div>

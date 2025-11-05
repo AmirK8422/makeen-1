@@ -197,5 +197,4 @@ function AddStudentModal({ handleClose }: StudentModalProps) {
     </>
   );
 }
-
 export default AddStudentModal;

@@ -11,7 +11,7 @@ export default function AdminLoginPage() {
 
   const handleLogin = (e:any) => {
     e.preventDefault();
-    if(!username||!password) return setError("!لطفا یوزر و پسوورد رو وارد کنید " )
+    if(!username||!password) return setError("!لطفا یوزر و پسوورد رو وارد کنید " )  
     if (username === "admin" && password === "1234") {
       // ✅ correct → redirect to dashboard
       router.push("/Admin/Dashboard");
