@@ -7,6 +7,8 @@ import { CiEdit } from "react-icons/ci";
 import { GoTrash } from "react-icons/go";
 import { IoMdClose } from "react-icons/io";
 import { Modal, Box, Typography, IconButton } from "@mui/material";
+import InputStudent from "./InputStudent";
+import AddStudentModal from "./AddStudentModal";
 
 const Student = () => {
   const [users, setUsers] = useState([
@@ -27,6 +29,7 @@ const Student = () => {
     "وضعیت دوره در صفحه اصلی",
     "عملیات",
   ];
+
 
   return (
     <>
@@ -80,8 +83,7 @@ const Student = () => {
           />
         </div>
       </div>
-
-      {/* ✅ Modal from MUI */}
+      
       <Modal
         open={open}
         onClose={handleClose}
@@ -91,7 +93,7 @@ const Student = () => {
         <Box
           sx={{
             position: "absolute",
-            top: "40%",
+            top: "45%",
             left: "50%",
             transform: "translate(-50%, -50%)",
             bgcolor: "background.paper",
@@ -101,50 +103,7 @@ const Student = () => {
             width: 1200,
           }}
         >
-          <div className="flex items-center justify-between mb-3">
-            <IconButton onClick={handleClose}>
-              <IoMdClose />
-            </IconButton>
-            <p>افزودن مکینی جدید</p>
-          </div>
-
-          {/* محتوا */}
-          <div className="" dir="rtl">
-            <div className="py-8 grid grid-cols-3 gap-10 text-right">
-              {Array.from({ length: 6 }).map((_, index) => (
-                <div key={index} className="flex flex-col gap-1">
-                  <label htmlFor={`course-${index}`}>
-                    نام دوره {index + 1}
-                  </label>
-                  <input
-                    type="text"
-                    id={`course-${index}`}
-                    placeholder="typeAdres"
-                    className="border w-[356px] border-gray-400 p-2 rounded-md text-right"
-                  />
-                </div>
-              ))}
-
-              <div className="col-span-3 flex flex-col gap-1 text-right">
-                <label htmlFor="sentence">جمله مکینی</label>
-                <input
-                  type="text"
-                  id="sentence"
-                  placeholder="typeAdres"
-                  className="border w-full border-gray-400 p-2 rounded-md text-right"
-                />
-              </div>
-            </div>
-
-            <div className="flex justify-center items-center gap-4 mt-8">
-              <button className="bg-gray-400 text-white px-6 py-2 rounded-md hover:bg-gray-500 transition">
-                انصراف
-              </button>
-              <button className="colorMakeen text-white px-6 py-2 rounded-md hover:bg-orange-400 transition">
-                ثبت دوره
-              </button>
-            </div>
-          </div>
+         <AddStudentModal handleClose={handleClose}/>
         </Box>
       </Modal>
     </>
