@@ -2,29 +2,31 @@
 import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import Hero from "../../../app/Admin/(URL)/Sections/Hero/page";
-import Property from "../../../app/Admin/(URL)/Sections/Property/page";
-import Videos from "../../../app/Admin/(URL)/Sections/Videos/page";
-import PresentationMakeen from "../../../app/Admin/(URL)/Sections/PresentationMakeen/page";
-import Mentors from "../../../app/Admin/(URL)/Sections/Mentors/page";
-import CoWork from "../../../app/Admin/(URL)/Sections/CoWork/page";
-import Questions from "../../../app/Admin/(URL)/Sections/Questions/page";
-import Honors from "../../../app/Admin/(URL)/Sections/Honors/page";
+
+import Hero from "../../../app/admin/(URL)/Sections/Hero/page";
+import Property from "../../../app/admin/(URL)/Sections/Property/page";
+import Videos from "../../../app/admin/(URL)/Sections/Videos/page";
+import PresentationMakeen from "../../../app/admin/(URL)/Sections/PresentationMakeen/page";
+import Mentors from "../../../app/admin/(URL)/Sections/Mentors/page";
+import CoWork from "../../../app/admin/(URL)/Sections/CoWork/page";
+import Questions from "../../../app/admin/(URL)/Sections/Questions/page";
+import Honors from "../../../app/admin/(URL)/Sections/Honors/page";
 
 interface TabPanelProps {
   children?: React.ReactNode;
   index: number;
   value: number;
 }
-const heroTabs = [
-  { id: 1, components: <Hero /> },
-  { id: 2, components: <Property /> },
-  { id: 3, components: <Videos /> },
-  { id: 5, components: <PresentationMakeen /> },
-  { id: 6, components: <Mentors /> },
-  { id: 7, components: <CoWork /> },
-  { id: 8, components: <Questions /> },
-  { id: 9, components: <Honors /> },
+
+const SECTIONS = [
+  { title: "هیرو", component: <Hero /> },
+  { title: "ویژگی ها", component: <Property /> },
+  { title: "ویدیو ها", component: <Videos /> },
+  { title: "معرفی مکین", component: <PresentationMakeen /> },
+  { title: "منتور ها", component: <Mentors /> },
+  { title: "فضای کار اشتراکی", component: <CoWork /> },
+  { title: "سوالات متداول", component: <Questions /> },
+  { title: "افتخارات", component: <Honors /> },
 ];
 
 function CustomTabPanel(props: TabPanelProps) {
@@ -34,8 +36,8 @@ function CustomTabPanel(props: TabPanelProps) {
     <div
       role="tabpanel"
       hidden={value !== index}
-      id={`simple-tabpanel-${index}`}
-      aria-labelledby={`simple-tab-${index}`}
+      id={`panel-${index}`}
+      aria-labelledby={`tab-${index}`}
       {...other}
     >
       {value === index && children}
@@ -43,62 +45,8 @@ function CustomTabPanel(props: TabPanelProps) {
   );
 }
 
-function a11yProps(index: number) {
-  return {
-    id: `simple-tab-${index}`,
-    "aria-controls": `simple-tabpanel-${index}`,
-  };
-}
-
 function Navbar() {
-  const title = [
-    {
-      id: 1,
-      title: "هیرو",
-      href: "<Hero/>",
-    },
-    {
-      id: 2,
-      title: "ویژگی ها",
-      href: "<Property/>",
-    },
-    {
-      id: 3,
-      title: "ویدیو ها",
-      href: "<Videos/>",
-    },
-    {
-      id: 4,
-      title: "معرفی مکین",
-      href: "<PresentationMakeen/>",
-    },
-    {
-      id: 5,
-      title: "منتور ها",
-      href: "<Mentors/>",
-    },
-    {
-      id: 6,
-      title: "فضای کار اشتراکی",
-      href: "<CoWork/>",
-    },
-    {
-      id: 7,
-      title: "سوالات متداول",
-      href: "<Questions/>",
-    },
-    {
-      id: 8,
-      title: " افتخارات",
-      href: "<Honors/>",
-    },
-  ];
-
   const [value, setValue] = React.useState(0);
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-  };
 
   return (
     <div>
@@ -116,20 +64,22 @@ function Navbar() {
           },
         }}
         value={value}
-        onChange={handleChange}
-        aria-label="basic tabs example"
+        onChange={(e, nv) => setValue(nv)}
       >
-        {title.map((items) => (
+        {SECTIONS.map((item, index) => (
           <Tab
+            key={index}
+            id={`tab-${index}`}
+            aria-controls={`panel-${index}`}
             sx={{ fontSize: "20px", fontWeight: "400" }}
-            label={items.title}
-            {...a11yProps(items.id)}
+            label={item.title}
           />
         ))}
       </Tabs>
-      {heroTabs.map((heroItem, heroIndex) => (
-        <CustomTabPanel value={value} index={heroIndex}>
-          {heroItem.components}
+
+      {SECTIONS.map((item, index) => (
+        <CustomTabPanel key={index} value={value} index={index}>
+          {item.component}
         </CustomTabPanel>
       ))}
     </div>

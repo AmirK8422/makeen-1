@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 
-
-
-
-
+.fade-bottom {
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black calc(100% - 100px), transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black calc(100% - 100px), transparent 100%);
+}
 
 
 @layer utilities {

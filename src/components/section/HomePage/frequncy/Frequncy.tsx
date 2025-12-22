@@ -84,7 +84,10 @@ function AccordionCard({
 
 function FAQSection() {
   return (
-    <Container className="mt-24">
+<>
+<div className="mt-24">
+
+    <Container >
       <h3 className="text-center font-semibold text-3xl mb-7">سوالات متداول</h3>
       <div className="flex flex-col gap-3  md:flex-row md:gap-4 " dir="rtl">
         {/* ستون راست */}
@@ -106,6 +109,11 @@ function FAQSection() {
         </div>
       </div>
     </Container>
+</div>
+
+
+</>
+    
   );
 }
 

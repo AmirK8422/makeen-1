@@ -1,6 +1,4 @@
-import Chart from '@/components/PanelAdminSection/DashBoard/Chart/ChartShow'
 import Dashboard from '@/components/PanelAdminSection/DashBoard/Dashboard'
-import DataCard from '@/components/PanelAdminSection/DashBoard/DataCard/DataCard'
 import React from 'react'
 
 function page() {

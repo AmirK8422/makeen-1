@@ -14,7 +14,7 @@ export default function AdminLoginPage() {
     if(!username||!password) return setError("!لطفا یوزر و پسوورد رو وارد کنید " )  
     if (username === "admin" && password === "1234") {
       // ✅ correct → redirect to dashboard
-      router.push("/Admin/Dashboard");
+      router.push("/admin/Dashboard");
     } else {
       setError("نام کاربری یا رمز عبور اشتباه است ❌");
     }

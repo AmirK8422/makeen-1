@@ -1,113 +1,172 @@
+
+
+
 "use client";
 import React, { useState } from "react";
-import EditButton from "@/components/PanelAdminSection/PublicComponent/EditButton";
-import ExelButton from "@/components/PanelAdminSection/PublicComponent/ExelButton";
-import ReusableTable from "@/components/PanelAdminSection/PublicComponent/FormUser";
-import { CiEdit } from "react-icons/ci";
-import { GoTrash } from "react-icons/go";
-import { IoMdClose } from "react-icons/io";
-import { Modal, Box, Typography, IconButton } from "@mui/material";
-import InputStudent from "./InputStudent";
-import AddStudentModal from "./AddStudentModal";
 
-const Student = () => {
-  const [users, setUsers] = useState([
-    { id: 1, name: "UI/UX", company: "اسنپ", voise: "دارد", mainpage: false },
-    { id: 2, name: "Python", company: "اسنپ", voise: "دارد", mainpage: true },
-    { id: 3, name: "PHP", company: "اسنپ", voise: "دارد", mainpage: false },
-  ]);
+const Student = ({ handleClose, onAdd }: any) => {
+  const [form, setForm] = useState({
+    name: "",
+    coursesNumber: "",
+    img: "",
+    voice: "",
+    jopTitleCompany: "",
+    imgCompany: "",
+    mesageMakeeni: "",
+  });
 
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => setOpen(true);
-  const handleClose = () => setOpen(false);
+  const [previewImg, setPreviewImg] = useState("");
+  const [previewCompany, setPreviewCompany] = useState("");
 
-  const columns = [
-    "ردیف",
-    "نام مکینی",
-    "نام شرکت",
-    "وضعیت وویس",
-    "وضعیت دوره در صفحه اصلی",
-    "عملیات",
-  ];
+  // Live form update
+  const handleChange = (e: any) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
+  // selecting image but optional
+  const handleImage = (e: any) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const url = URL.createObjectURL(file);
+    setPreviewImg(url);
+    setForm({ ...form, img: url });
+  };
+
+  const handleCompanyImage = (e: any) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const url = URL.createObjectURL(file);
+    setPreviewCompany(url);
+    setForm({ ...form, imgCompany: url });
+  };
+
+  const submitForm = async () => {
+    const res = await fetch("/api/Makeeni", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
+
+    const data = await res.json();
+    onAdd(data.data); // Add to table dynamically
+    handleClose();
+  };
 
   return (
-    <>
-      <div>
-        {/* Header Buttons */}
-        <div className="flex flex-row-reverse items-center gap-4 mt-6">
-          <EditButton onClick={handleOpen}>افزودن مکینی جدید</EditButton>
-          <ExelButton />
-        </div>
+    <div className="w-full">
+      <h2 className="text-xl font-bold mb-4">افزودن مکینی جدید</h2>
 
-        {/* Title */}
-        <ul className="flex gap-8 text-[18px] mt-4">
-          <li className="border-b-4 border-orange-400">همه مکینی‌ها</li>
-        </ul>
+      <div className="grid grid-cols-3 gap-5">
 
-        {/* Table */}
-        <div className="bg-white rounded-md shadow-sm">
-          <ReusableTable
-            columns={columns}
-            data={users.map((u) => ({
-              ردیف: u.id,
-              "نام مکینی": u.name,
-              "نام شرکت": u.company,
-              "وضعیت وویس": u.voise,
-              "وضعیت دوره در صفحه اصلی": (
-                <input
-                  type="checkbox"
-                  checked={u.mainpage}
-                  onChange={() =>
-                    setUsers((prev) =>
-                      prev.map((item) =>
-                        item.id === u.id
-                          ? { ...item, mainpage: !item.mainpage }
-                          : item
-                      )
-                    )
-                  }
-                />
-              ),
-              عملیات: (
-                <div className="flex gap-2 text-xl cursor-pointer">
-                  <button title="حذف">
-                    <GoTrash className="text-red-500 hover:scale-110 duration-200" />
-                  </button>
-                  <button title="ویرایش">
-                    <CiEdit className="text-blue-500 hover:scale-110 duration-200" />
-                  </button>
-                </div>
-              ),
-            }))}
+        {/* name */}
+        <div>
+          <label>نام مکینی</label>
+          <input
+            type="text"
+            name="name"
+            className="w-full border p-2 rounded mt-1"
+            onChange={handleChange}
           />
         </div>
+
+        {/* courses number */}
+        <div>
+          <label>تعداد دوره</label>
+          <input
+            type="text"
+            name="coursesNumber"
+            className="w-full border p-2 rounded mt-1"
+            onChange={handleChange}
+          />
+        </div>
+
+        {/* voice */}
+        <div>
+          <label>لینک ویس</label>
+          <input
+            type="text"
+            name="voice"
+            className="w-full border p-2 rounded mt-1"
+            onChange={handleChange}
+          />
+        </div>
+
+        {/* Job title */}
+        <div>
+          <label>سمت شغلی</label>
+          <input
+            type="text"
+            name="jopTitleCompany"
+            className="w-full border p-2 rounded mt-1"
+            onChange={handleChange}
+          />
+        </div>
+
+        {/* message */}
+        <div className="col-span-3">
+          <label>پیام مکینی</label>
+          <textarea
+            name="mesageMakeeni"
+            className="w-full border p-2 rounded mt-1"
+            rows={3}
+            onChange={handleChange}
+          ></textarea>
+        </div>
+
+        {/* user image */}
+        <div>
+          <label>عکس مکینی</label>
+          <input
+            type="file"
+            className="w-full mt-1"
+            onChange={handleImage}
+          />
+          {previewImg && (
+            <img
+              src={previewImg}
+              className="w-24 h-24 rounded mt-2 object-cover"
+            />
+          )}
+        </div>
+
+        {/* company image */}
+        <div>
+          <label>لوگوی شرکت</label>
+          <input
+            type="file"
+            className="w-full mt-1"
+            onChange={handleCompanyImage}
+          />
+          {previewCompany && (
+            <img
+              src={previewCompany}
+              className="w-20 h-20 rounded mt-2 object-cover"
+            />
+          )}
+        </div>
+
       </div>
-      
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="add-student-title"
-        aria-describedby="add-student-description"
-      >
-        <Box
-          sx={{
-            position: "absolute",
-            top: "45%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            bgcolor: "background.paper",
-            boxShadow: 10,
-            borderRadius: 3,
-            p: 3,
-            width: 1200,
-          }}
+
+      <div className="flex justify-end mt-6 gap-4">
+        <button
+          className="bg-gray-300 text-black px-5 py-2 rounded"
+          onClick={handleClose}
         >
-         <AddStudentModal handleClose={handleClose}/>
-        </Box>
-      </Modal>
-    </>
+          انصراف
+        </button>
+
+        <button
+          className="bg-orange-500 text-white px-5 py-2 rounded"
+          onClick={submitForm}
+        >
+          ذخیره اطلاعات
+        </button>
+      </div>
+    </div>
   );
 };
 
 export default Student;
+

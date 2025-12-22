@@ -10,9 +10,9 @@ const Navbar = () => {
     <ul className="flex gap-8 text-18">
       <li>
         <Link
-          href="/Admin/Manageusers"
+          href="/admin/Manageusers"
           className={`${
-            pathname === "/Admin/Manageusers"
+            pathname === "/admin/Manageusers"
               ? "border-orange-400 border-b-3 "
               : ""
           } cursor-pointer`}
@@ -23,9 +23,9 @@ const Navbar = () => {
 
       <li>
         <Link
-          href="/Admin/Manageusers/Newsuser"
+          href="/admin/Manageusers/Newsuser"
           className={`${
-            pathname === "/Admin/Manageusers/Newsuser"
+            pathname === "/admin/Manageusers/Newsuser"
               ? "border-orange-400 border-b-3 "
               : ""
           }

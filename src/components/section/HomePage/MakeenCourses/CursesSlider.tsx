@@ -9,8 +9,8 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { CardsInformation } from "@/app/site/(URL)/courses/page";
-import Cards from "@/app/site/(URL)/courses/cards";
+import { CardsInformation } from "@/app/(site)/(URL)/courses/page";
+import Cards from "@/app/(site)/(URL)/courses/cards";
 
 function CoursesSlider() {
   return (

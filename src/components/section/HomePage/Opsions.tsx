@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { Edit2 } from 'iconsax-reactjs';
 
 type Tdialog = {
-  dialog?: () => void ,
+  dialog?: () => React.ReactNode,
   setIsOpen?: React.Dispatch<React.SetStateAction<boolean>>,
   ButtonStyle?: string,
 }
@@ -101,14 +101,14 @@ function Opsions({dialog,setIsOpen,ButtonStyle}: Tdialog) {
   <div key={index} className="bg-white rounded-2xl shadow-2xl">
     <button onClick={() => setIsOpen?.(true)} className={`h-full ${ButtonStyle}`}>
       <div className="rounded-2xl p-6 flex flex-col gap-3">
-        <div className={`flex justify-between items-center mb-2 ${pathname == '/Admin/Sections/Property' ? 'flex-row' : 'flex-row-reverse'}`}>
+        <div className={`flex justify-between items-center mb-2 ${pathname == '/admin/Sections/Property' ? 'flex-row' : 'flex-row-reverse'}`}>
           <div className="flex items-center gap-2 ">
             <div className="p-1 rounded-xl" style={{ backgroundColor: opsion.bg }}>
               <img src={opsion.logo} alt={opsion.title} className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-semibold text-gray-800">{opsion.title}</h3>
           </div>
-          {pathname == '/Admin/Sections/Property' && <Edit2 color="#8e8e93" />}
+          {pathname == '/admin/Sections/Property' && <Edit2 color="#8e8e93" />}
         </div>
         <p className="text-gray-600 text-sm leading-relaxed text-end">{opsion.description}</p>
       </div>
