@@ -1,4 +1,4 @@
-import FooterSeting from '@/components/PanelAdminSection/SettingAdmin/Footer/FooterSetong'
+import FooterSeting from '@/components/PanelAdminSection/SettingAdmin/Footer/FooterSetting'
 import React from 'react'
 
 function page() {

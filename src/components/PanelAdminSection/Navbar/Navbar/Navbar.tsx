@@ -13,30 +13,30 @@ function Navbar() {
   const pathname = usePathname() ?? "";
 
   const links: Array<any> = [
-    { href: "/admin/Dashboard", label: "داشبورد", logo: <BiHomeAlt2 /> },
+    { href: "/Admin/Dashboard", label: "داشبورد", logo: <BiHomeAlt2 /> },
     {
-      href: "/admin/Manageusers",
+      href: "/Admin/Manageusers",
       label: "مدیریت کاربران ها",
       logo: <MdOutlineManageAccounts />,
     },
 
     { type: "section", label: "مدیریت محتوا" },
     {
-      href: "/admin/Sections",
+      href: "/Admin/Sections",
       label: "سکشن ها",
       logo: <PiIntersectThree />,
     },
-    { href: "/admin/Courses", label: "دوره ها", logo: <PiIntersectThree /> },
+    { href: "/Admin/Courses", label: "دوره ها", logo: <PiIntersectThree /> },
     {
-      href: "/admin/Gallery",
+      href: "/Admin/Gallery",
       label: "گالری تصاویر",
       logo: <PiIntersectThree />,
     },
-    { href: "/admin/Article", label: "مقالات", logo: <PiIntersectThree /> },
-    { href: "/admin/Students", label: "مکینی ها", logo: <PiIntersectThree /> },
+    { href: "/Admin/Article", label: "مقالات", logo: <PiIntersectThree /> },
+    { href: "/Admin/Students", label: "مکینی ها", logo: <PiIntersectThree /> },
 
     { type: "section", label: "مدیریت پنل" },
-    { href: "/admin/Setting", label: "تنظیمات", logo: <IoSettingsOutline /> },
+    { href: "/Admin/Setting", label: "تنظیمات", logo: <IoSettingsOutline /> },
     {
       href: "/site",
       label: "خروج",

@@ -1,5 +1,5 @@
 'use client'
-import Opsions from '@/components/section/HomePage/Opsions'
+import Options from '@/components/section/HomePage/Options'
 import React, { useState } from 'react'
 import ReactModal from 'react-modal'
 import {CloseCircle} from 'iconsax-reactjs';
@@ -57,7 +57,7 @@ function page() {
 
   return (
     <div>
-      <Opsions dialog={dialog} setIsOpen={setIsOpen} ButtonStyle={ButtonStyle}/>
+      <Options dialog={dialog} setIsOpen={setIsOpen} ButtonStyle={ButtonStyle}/>
     </div>
   )
 }

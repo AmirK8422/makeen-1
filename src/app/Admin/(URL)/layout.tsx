@@ -1,4 +1,4 @@
-import Header from "@/components/PanelAdminSection/Navbar/NotifictionSection/Header";
+import Header from "@/components/PanelAdminSection/Navbar/NotificationSection/Header";
 import Navbar from "@/components/PanelAdminSection/Navbar/Navbar/Navbar";
 import type { ReactNode } from "react";
 

@@ -3,14 +3,14 @@ import React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 
-import Hero from "../../../app/admin/(URL)/Sections/Hero/page";
-import Property from "../../../app/admin/(URL)/Sections/Property/page";
-import Videos from "../../../app/admin/(URL)/Sections/Videos/page";
-import PresentationMakeen from "../../../app/admin/(URL)/Sections/PresentationMakeen/page";
-import Mentors from "../../../app/admin/(URL)/Sections/Mentors/page";
-import CoWork from "../../../app/admin/(URL)/Sections/CoWork/page";
-import Questions from "../../../app/admin/(URL)/Sections/Questions/page";
-import Honors from "../../../app/admin/(URL)/Sections/Honors/page";
+import Hero from "../../../app/Admin/(URL)/Sections/Hero/page";
+import Property from "../../../app/Admin/(URL)/Sections/Property/page";
+import Videos from "../../../app/Admin/(URL)/Sections/Videos/page";
+import PresentationMakeen from "../../../app/Admin/(URL)/Sections/PresentationMakeen/page";
+import Mentors from "../../../app/Admin/(URL)/Sections/Mentors/page";
+import CoWork from "../../../app/Admin/(URL)/Sections/CoWork/page";
+import Questions from "../../../app/Admin/(URL)/Sections/Questions/page";
+import Honors from "../../../app/Admin/(URL)/Sections/Honors/page";
 
 interface TabPanelProps {
   children?: React.ReactNode;

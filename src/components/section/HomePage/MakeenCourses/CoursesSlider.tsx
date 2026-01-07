@@ -83,7 +83,7 @@ function CoursesSlider() {
 
       <div className="flex items-center justify-center mt-12">
         <button className="w-48 text-blue-600 border p-2 rounded-full border-blue-600">
-          <a href="site/courses">مشاهده همه دوره ها</a>
+          <a href="/courses">مشاهده همه دوره ها</a>
         </button>
       </div>
     </div>

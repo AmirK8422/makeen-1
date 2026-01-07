@@ -7,11 +7,11 @@ import { usePathname } from "next/navigation";
 
 const PhoneNav = () => {
   const links = [
-    { href: "/site", label: "خانه", icon: <Home size="24" /> },
-    { href: "/site/courses", label: "دوره‌ها", icon: <Element3 size="24" /> },
-    { href: "/site/shareoffice", label: "فضای اشتراکی", icon: <KyberNetwork size="24" /> },
-    { href: "/site/gallery", label: "گالری", icon: <Gallery size="24" /> },
-    { href: "/site/students", label: "مکینی‌ها", icon: <People size="24" /> },
+    { href: "/", label: "خانه", icon: <Home size="24" /> },
+    { href: "/courses", label: "دوره‌ها", icon: <Element3 size="24" /> },
+    { href: "/shareoffice", label: "فضای اشتراکی", icon: <KyberNetwork size="24" /> },
+    { href: "/gallery", label: "گالری", icon: <Gallery size="24" /> },
+    { href: "/students", label: "مکینی‌ها", icon: <People size="24" /> },
   ];
 
   const isMobile = useMediaQuery({ maxWidth: 767 });

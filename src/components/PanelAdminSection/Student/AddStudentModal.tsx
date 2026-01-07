@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { IconButton } from "@mui/material";
 import { IoMdClose } from "react-icons/io";
-import SuccessModal from "../AlertComponents/SucssesAlert";
+import SuccessAlert from "../AlertComponents/SuccessAlert";
 import { TickCircle } from "iconsax-reactjs";
-import { api } from "../SettingAdmin/Footer/FooterSetong";
+import { api } from "../SettingAdmin/Footer/FooterSetting";
 
 type StudentModalProps = {
   handleClose: () => void;
@@ -185,15 +185,7 @@ function AddStudentModal({ handleClose }: StudentModalProps) {
         </div>
       </div>
 
-      {/*  success modal*/}
-      {showSuccess && (
-        <SuccessModal
-          icon={<TickCircle size="40" />}
-          title="تغییرات با موفقیت اعمال شد"
-          description="اطلاعات شما با موفقیت ثبت شد."
-          onConfirm={() => setShowSuccess(false)}
-        />
-      )}
+      {showSuccess && <SuccessAlert message="دانشجو با موفقیت افزوده شد" onClose={() => setShowSuccess(false)} />}
     </>
   );
 }

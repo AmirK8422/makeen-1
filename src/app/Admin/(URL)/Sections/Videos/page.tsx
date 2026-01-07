@@ -1,5 +1,5 @@
 'use client'
-import VidioSlider from "@/components/section/HomePage/VidioSlider/VidioSlider";
+import VideoSlider from "@/components/section/HomePage/VideoSlider/VideoSlider";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar } from "swiper/modules";

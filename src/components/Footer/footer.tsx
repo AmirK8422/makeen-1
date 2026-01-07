@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Call, Google, Location } from "iconsax-reactjs";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { api } from "../PanelAdminSection/SettingAdmin/Footer/FooterSetong";
+import { api } from "../PanelAdminSection/SettingAdmin/Footer/FooterSetting";
 
 
 function Footer() {
