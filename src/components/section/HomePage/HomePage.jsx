@@ -12,6 +12,7 @@ import Article from "./articleSection/ArticleSection";
 import StudentCompanyWork from "./companyStudentWork/StudentCompanyWork";
 import Bg from "./Bg";
 import Frequncy from "./frequncy/Frequncy";
+import ProfileSlider from "./Mentors/MentorsSlider";
 
 function HomePage() {
   return (
@@ -26,6 +27,7 @@ function HomePage() {
       <AboutMakeen />
       <MakeenStudents />
       <Mentors />
+      <ProfileSlider/>
       <Coworks />
       <Article />
       <Frequncy/>
