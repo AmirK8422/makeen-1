@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { usePathname } from "next/navigation";
 import { Edit2 } from 'iconsax-reactjs';
+import Image from "next/image";
 
 type Tdialog = {
   dialog?: () => React.ReactNode,
@@ -11,7 +12,7 @@ type Tdialog = {
   ButtonStyle?: string,
 }
 
-function Opsions({dialog,setIsOpen,ButtonStyle}: Tdialog) {
+function Options({dialog,setIsOpen,ButtonStyle}: Tdialog) {
   
   const pathname = usePathname();
 
@@ -74,7 +75,9 @@ function Opsions({dialog,setIsOpen,ButtonStyle}: Tdialog) {
                     className="p-1 rounded-xl"
                     style={{ backgroundColor: opsion.bg }}
                   >
-                    <img
+                    <Image
+                      width={40} 
+                      height={40}
                       src={opsion.logo}
                       alt={opsion.title}
                       className="w-6 h-6"
@@ -98,13 +101,13 @@ function Opsions({dialog,setIsOpen,ButtonStyle}: Tdialog) {
 
       <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
     {advanteges.map((opsion, index) => (
-  <div key={index} className="bg-white rounded-2xl shadow-2xl">
+  <div key={index} className="bg-white rounded-2xl shadow-sm">
     <button onClick={() => setIsOpen?.(true)} className={`h-full ${ButtonStyle}`}>
       <div className="rounded-2xl p-6 flex flex-col gap-3">
-        <div className={`flex justify-between items-center mb-2 ${pathname == '/admin/Sections/Property' ? 'flex-row' : 'flex-row-reverse'}`}>
-          <div className="flex items-center gap-2 ">
+        <div className={`flex justify-between items-center mb-2 ${pathname == '/admin/Sections/Property' ? 'flex-row-reverse' : 'flex-row-reverse'}`}>
+          <div className="flex flex-row-reverse items-center gap-2 ">
             <div className="p-1 rounded-xl" style={{ backgroundColor: opsion.bg }}>
-              <img src={opsion.logo} alt={opsion.title} className="w-6 h-6" />
+              <Image width={40} height={40} src={opsion.logo} alt={opsion.title} className="w-6 h-6" />
             </div>
             <h3 className="text-lg font-semibold text-gray-800">{opsion.title}</h3>
           </div>
@@ -122,4 +125,4 @@ function Opsions({dialog,setIsOpen,ButtonStyle}: Tdialog) {
   );
 }
 
-export default Opsions;
+export default Options;

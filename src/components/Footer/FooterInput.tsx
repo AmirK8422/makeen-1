@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 function FooterInput() {
@@ -18,8 +19,8 @@ function FooterInput() {
                     className="w-3xs bg-white rounded shadow text-right p-2 focus:outline-none text-gray-500"
                   />
       </div>
-      <img src="img/imagesInSite/layer.svg" alt=""  className='hidden lg:hidden 2xl:block absolute -top-3 left-120' />
-    </footer>//
+      <Image width={140} height={140} src="img/imagesInSite/layer.svg" alt=""  className='hidden lg:hidden 2xl:block absolute -top-3 left-120' />
+    </footer>
   )
 }
 

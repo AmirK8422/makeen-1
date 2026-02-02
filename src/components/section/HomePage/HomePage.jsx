@@ -1,10 +1,10 @@
 import React from "react";
 import Timer from "./Timer";
-import Opsions from "./Opsions";
+import Opsions from "./Options";
 import FooterInput from "@/components/Footer/FooterInput";
 import VidioSlider from "./VidioSlider/VidioSlider";
 import AboutMakeen from "./AboutMakeen/AboutMakeen";
-import CursesSlider from "./MakeenCourses/CursesSlider";
+import CursesSlider from "./MakeenCourses/CoursesSlider";
 import MakeenStudents from "./MakeenStudents/MakeenStudents";
 import Mentors from "./Mentors/Mentors";
 import Coworks from "./Cowork/Coworks";
@@ -18,20 +18,19 @@ function HomePage() {
   return (
     <div>
       <div className="mx-4 sm:mx-10 lg:mx-20 flex flex-col lg:flex-row items-center justify-between mt-10 gap-8">
-        <Bg/>
+        <Bg />
         <Timer />
       </div>
       <Opsions />
-      <CursesSlider/>
+      <CursesSlider />
       <VidioSlider />
       <AboutMakeen />
       <MakeenStudents />
-      <Mentors />
-      <ProfileSlider/>
+      <ProfileSlider />
       <Coworks />
       <Article />
-      <Frequncy/>
-      <StudentCompanyWork/>
+      <Frequncy />
+      <StudentCompanyWork />
       <FooterInput />
     </div>
   );
