@@ -10,7 +10,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       <Navbar />
       <PhoneNav/>
       <main>{children}</main>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
