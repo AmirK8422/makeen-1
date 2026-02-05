@@ -14,6 +14,7 @@
     "@mui/icons-material": "^7.3.2",
     "@mui/material": "^7.3.2",
     "@svgr/webpack": "^8.1.0",
+    "@tanstack/react-query": "^5.90.20",
     "axios": "^1.13.1",
     "iconsax-reactjs": "^0.0.8",
     "moment-jalaali": "^0.10.4",
@@ -28,7 +29,8 @@
     "react-toastify": "^11.0.5",
     "recharts": "^3.2.1",
     "swiper": "^11.2.10",
-    "wavesurfer.js": "^7.10.3"
+    "wavesurfer.js": "^7.10.3",
+    "zustand": "^5.0.11"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
