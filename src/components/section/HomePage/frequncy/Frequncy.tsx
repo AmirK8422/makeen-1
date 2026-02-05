@@ -86,11 +86,9 @@ function FAQSection() {
   return (
 <>
 <div className="mt-24">
-
     <Container >
       <h3 className="text-center font-semibold text-3xl mb-7">سوالات متداول</h3>
       <div className="flex flex-col gap-3  md:flex-row md:gap-4 " dir="rtl">
-        {/* ستون راست */}
         <div className="flex-1 flex flex-col gap-4">
           {faqItems
             .filter((_, i) => i % 2 === 0)
@@ -98,8 +96,6 @@ function FAQSection() {
               <AccordionCard item={item} key={`right-${index}`} index={index} />
             ))}
         </div>
-
-        {/* ستون چپ */}
         <div className="flex-1 flex flex-col gap-4">
           {faqItems
             .filter((_, i) => i % 2 === 1)
