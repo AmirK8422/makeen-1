@@ -7,7 +7,7 @@ import { api } from "../PanelAdminSection/SettingAdmin/Footer/FooterSetong";
 import Image from "next/image";
 
 
-function TheFooter() {
+function Footer() {
   const [footerData, setFooterData] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
@@ -107,4 +107,4 @@ function TheFooter() {
   );
 }
 
-export default TheFooter;
+export default Footer;
