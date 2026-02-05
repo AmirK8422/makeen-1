@@ -1,11 +1,7 @@
 "use client";
 import React from "react";
-
-// Swiper React imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -19,7 +15,6 @@ function CoursesSlider() {
         <h2 className="font-semibold text-3xl">دوره های مکین</h2>
       </div>
 
-      {/* اسلایدر اول (چپ به راست) */}
       <div className="flex pb-9">
         <Swiper
           modules={[Autoplay]}
@@ -49,8 +44,6 @@ function CoursesSlider() {
           ))}
         </Swiper>
       </div>
-
-      {/* اسلایدر دوم (راست به چپ) */}
       <div className="flex p-2">
         <Swiper
           modules={[Autoplay]}

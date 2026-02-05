@@ -1,5 +1,5 @@
 'use client'
-import Opsions from '@/components/section/HomePage/Opsions'
+import Opsions from '@/components/section/HomePage/Options'
 import React, { useState } from 'react'
 import ReactModal from 'react-modal'
 import {CloseCircle} from 'iconsax-reactjs';

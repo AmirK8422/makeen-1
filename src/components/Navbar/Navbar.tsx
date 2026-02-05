@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
-
+import Image from "next/image";
 function Navbar() {
   const pathname = usePathname();
 
@@ -16,8 +16,8 @@ function Navbar() {
   ];
 
   return (
-    <header className="mx-0 md:mx-20 mt-4 rounded-2xl shadow-lg bg-white/40 backdrop-blur-xl sticky top-2 z-40">
-      <div className="flex items-center justify-between md:justify-center p-2">
+    <header className="mx-0 md:mx-20 mt-4 rounded-2xl shadow-sm bg-white/40 backdrop-blur-xl sticky top-2 z-40">
+      <div className="flex  px-6 rounded-2xl items-center justify-between md:justify-center ">
         <button className="px-4 py-2 rounded-lg colorMakeen font-medium md:hidden">
           <Link href="/">مشاوره رایگان</Link>
         </button>
@@ -37,14 +37,16 @@ function Navbar() {
               </Link>
             ))}
           </ul>
-          <a href="/">
-          <img
+          <Link href="/">
+          <Image
+          width={144.8000030517578}
+          height={64}
             src="/img/MakeenLogo.svg"
             alt="logo"
             className="xl:w-36 lg:w-30 md:w-27"
           />
           
-          </a>
+          </Link>
         </div>
       </div>
     </header>

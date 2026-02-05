@@ -1,4 +1,4 @@
-import Footer from "@/components/Footer/footer";
+import TheFooter from "@/components/Footer/Footer";
 import Navbar from "@/components/Navbar/Navbar";
 import PhoneNav from "@/components/Navbar/PhoneNav";
 import type { ReactNode } from "react";
@@ -10,7 +10,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       <Navbar />
       <PhoneNav/>
       <main>{children}</main>
-      <Footer />
+      <TheFooter />
     </div>
   );
 }
